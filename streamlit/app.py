@@ -97,9 +97,9 @@ def main():
         st.pyplot(fig)
         
         alpha_2 = float(st.text_input('Введите уровень значимости в интервале от 0 до 1', value=0.05, key=2))
-        res = u_criteria(group_older, group_younger) < laplas_value(alpha_2)
+        res_2 = u_criteria(group_older, group_younger) < laplas_value(alpha_2)
 
-        if res:
+        if res_2:
             st.text('Принимаем нулевую гипотезу')
         else:
             st.text('Отклоняем нулевую гипотезу и принимаем альтернативную')
